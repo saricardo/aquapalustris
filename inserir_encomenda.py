@@ -30,8 +30,8 @@ myresult = mycursor.fetchall()
 
 myplants = []
 for x in myresult:
-  #print(x[1])
-  myplants.append(x[1]);
+    #print(x[1])
+    myplants.append(x[1]);
   
   
 n = 1
@@ -114,5 +114,11 @@ for line in encomenda:
         print("Error -"+ line +"- plant not found")
 
 print("Nova encomenda processada: " + ordercode)
+
+if os.path.isfile("encomendas.txt") == False:
+    orderfile = open("encomendas.txt", "x")
+orderfile = open("encomendas.txt", "a")
+orderfile.write(ordercode+"\n")
+
 foutput.close()
 finput.close();
