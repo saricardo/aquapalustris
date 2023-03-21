@@ -96,7 +96,7 @@ for line in encomenda:
             if has_numbers(piece):
                 #print(piece)
                 #if "â‚¬" in piece:
-                if "€" in piece:
+                if "€" in piece or "euro" in piece:
                     #print("euro symbol found")
                     numeric_string = "1"
                 elif "+" in piece:
@@ -116,9 +116,18 @@ for line in encomenda:
 print("Nova encomenda processada: " + ordercode)
 
 if os.path.isfile("encomendas.txt") == False:
-    orderfile = open("encomendas.txt", "x")
-orderfile = open("encomendas.txt", "a")
-orderfile.write(ordercode+"\n")
+    orderfile = open("encomendas.txt", "x", encoding="utf8",)
+orderfile = open("encomendas.txt", "a", encoding="utf8",)
+orderfile.write("\n"+ordercode+"\n\n")
+
+if os.path.isfile("input_address.txt") == True:
+    addressfile = open("input_address.txt", "r", encoding="utf8",)
+    address = addressfile.readlines()
+    for line in address:
+        orderfile.write(line)
+else:
+    print("address is missing")
+
 
 foutput.close()
 finput.close();

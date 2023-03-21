@@ -86,7 +86,7 @@ for line in encomenda:
             if has_numbers(piece):
                 #print(piece)
                 #if "â‚¬" in piece:
-                if "€" in piece:
+                if "€" in piece or "euro" in piece:
                     #print("euro symbol found")
                     numeric_string = "1"
                 elif "+" in piece:
@@ -104,7 +104,8 @@ for line in encomenda:
     else:
         print("Error -"+ line +"- plant not found")
 
-if TOTAL > 40:
+if TOTAL >= 40:
+    foutput.write("\nportes gratuitos")
     foutput.write("\nTOTAL: " +str(TOTAL)+"€")
 else:
     foutput.write("\nportes envio: " + str(portes) +"€")
