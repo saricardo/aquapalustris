@@ -109,7 +109,7 @@ for line in encomenda:
             else:
                 #clean variable
                 numeric_string = "1"
-        foutput.write(" #" + numeric_string + " -" + ordercode)
+        foutput.write(" x" + numeric_string + " -" + ordercode)
     else:
         print("Error -"+ line +"- plant not found")
 
