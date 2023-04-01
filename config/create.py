@@ -35,60 +35,107 @@ mycursor.execute("CREATE TABLE IF NOT EXISTS plantas (id INT AUTO_INCREMENT PRIM
 
 sql = "INSERT INTO plantas(name, preco, lago) VALUES (%s, %s, %s)"
 val = [
-  ('Thalia Dealbata', 15, 'casa'),
-  ('Estrelicia de Agua', 15, 'casa'),
+  ('Acorus Gramineus Variegatus', 4, 'entrada'),
+  ('Erva Japonesa', 4, 'entrada'),
+  
+  ('Aponogeton Distachyos', 5, 'povoa'),
+  ('Espinheiro de Agua', 5, 'povoa'),
+  ('Lotus de Inverno', 5, 'povoa'),
+  ('Nenufar Selvagem', 5, 'povoa'),
+  
+  ('Ceratophyllum Demersum', 2, 'stoantonio'),
+  ('Cauda de Raposa', 2, 'stoantonio'),
+  ('Foxtail', 2, 'stoantonio'),
+  
+  ('Clorofitum Comosum', 4, 'povoa'),
+  ('Clorofito', 4, 'povoa'),
+  
+  ('Crassula Helmsii', 3, 'eira'),
+  ('Crassula Aquatica', 3, 'eira'),
+  ('Sedum dos Pântanos', 3, 'eira'),
+  
+  ('Cyperus Alternifolius', 5, 'casa'),
+  ('Papiro Guarda Chuva', 5, 'casa'),
+  ('Sombrinha Chinesa', 5, 'casa'),
+  ('Papiro', 5, 'casa'),
+  
+  ('Eichhornia Azurea', 6, 'casa'),
+  ('Jacinto Ancorado', 6, 'casa'),
+  
+  ('Equisetum Hyemale', 5, 'entrada'),
+  ('Cana Japonesa', 5, 'entrada'),
+  
+  ('Equisetum Scirpoides', 3, 'entrada'),
+  ('Cana Japonesa Ana', 3, 'entrada'),
+  
+  ('Hesperantha Coccinea', 8, 'casa'),
+  ('Lirio do Rio', 8, 'casa'),
+  
+  ('Heteranthera Zosterifolia', 5, 'eira'),
+  ('Erva Estrelada', 5, 'eira'),
+  
+  ('Hottonia Palustris', 2, 'casa'),
+  ('Violeta de Água', 2, 'casa'),
+  
+  ('Houttunya Cordata Plena', 3, 'entrada'),
+  ('Erva Camaleao', 3, 'entrada'),
+  
+  ('Hydrocharis Morsus Ranae', 2, 'eira'),
+  ('Cabeca de Ra', 2, 'eira'),
+  
+  ('Iris Pseudacorus', 5, 'horta'),
+  ('Lirio Amarelo', 5, 'horta'),
+  
+  ('Juncus Effusus', 4, 'casa'),
+  ('Junco', 4, 'casa'),
+
+  ('Lemna Minor', 10, 'stoantonio'),
+  ('Lentilha', 10, 'stoantonio'),
+
+  ('Ludwigia Palustris', 5, 'casa'),
+  ('Ludwigia', 5, 'casa'),
+  
+  ('Lysimachia Nummularia', 2, 'eira'),
+  ('Estrela Rastejante', 2, 'eira'),
+  
+  ('Marsilea Mutica', 4, 'eira'),
+  ('Trevo Aquatico', 4, 'eira'),
+  
+  ('Nymphaea', 15, 'eira'),
+  ('Nenufar', 15, 'eira'),
+  
+  ('Nymphoides Peltata', 5, 'casa'),
+  ('Golfao Pequeno', 5, 'casa'),
+  ('Nenufar Anao', 5, 'casa'),
+  
   ('Pontederia Cordata', 5, 'casa'),
   ('Orelha de Veado', 5, 'casa'),
-  ('Ludwigia Palustris', 1, 'casa'),
-  ('Beldroega dos Pantanos', 1, 'casa'),
-  ('Nenufar Branco', 15, 'eira'),
-  ('Nymphaea Alba', 15, 'eira'),
-  ('Lirio Amarelo', 5, 'horta'),
-  ('Iris Pseudacorus', 5, 'horta'),
-  ('Trevo Aquatico', 5, 'eira'),
-  ('Marsilea Mutica', 5, 'eira'),
-  ('Jarro', 3, 'casa'),
-  ('Zantedeschia Aetopica', 3, 'casa'),
-  ('Nenufar Anao', 5, 'casa'),
-  ('Golfao Pequeno', 5, 'casa'),
-  ('Papiro', 5, 'casa'),
-  ('Cyperus Alternifolius', 5, 'casa'),
-  ('Cana Japonesa', 5, 'entrada'),
-  ('Erva Japonesa', 5, 'entrada'),
-  ('Equisetum Hyemale', 5, 'entrada'),
-  ('Cabeca de Ra', 3, 'eira'),
-  ('Hydrocharis Morsus Ranae', 3, 'eira'),
-  ('Lentilha', 10, 'stoantonio'),
-  ('Lemna Minor', 10, 'stoantonio'),
-  ('Cauda de Raposa', 1, 'stoantonio'),
-  ('Sedum dos Pântanos', 5, 'eira'),
-  ('Crassula Helmsii', 5, 'eira'),
+  ('Lucio Pequeno', 5, 'casa'),
+  
   ('Rotala Indica', 5, 'eira'),
-  ('Amania Bonsai', 5, 'eira'),
-  ('Vallisneria Gigantea', 5, 'stoantonio'),
-  ('Sagittaria Subulata', 3, 'eira'),
-  ('Sagittaria Graminea', 3, 'eira'),
-  ('Lirio do Rio', 5, 'casa'),
-  ('Hesperantha Coccinea', 5, 'casa'),
-  ('Lírio do Vento', 5, 'eira'),
-  ('Zephyranthes Candida', 5, 'eira'),
-  ('Violeta de Água', 2, 'casa'),
-  ('Hottonia Palustris', 2, 'casa'),
-  ('Salvinia Natans', 5, 'povoa'),
-  ('Salvinia', 5, 'povoa'),
-  ('Espinheiro de Agua', 5, 'povoa'),
-  ('Aponogeton Distanchyos', 5, 'povoa'),
-  ('Nenufar Selvagem', 5, 'povoa'),
-  ('Lysimachia Nummularia', 3, 'eira'),
-  ('Estrela Rastejante', 3, 'eira'),
-  ('Erva Estrelada', 3, 'eira'),
-  ('Heteranthera Zosterifolia', 3, 'eira'),
-  ('Fibra Optica', 4, 'entrada'),
+  ('Dente de Dragao', 5, 'eira'),
+  
+  ('Sagittaria Subulata', 2, 'eira'),
+  ('Flecha Prateada', 2, 'eira'),
+  
+  ('Salvinia', 5, 'casa'),
+  ('Salvinia Natans', 5, 'casa'),
+  
   ('Scirpus Cernuus', 4, 'entrada'),
-  ('Junco', 4, 'casa'),
-  ('Juncus Effusus', 4, 'casa'),
-  ('Erva Camaleao', 3, 'entrada'),
-  ('Houttunya Cordata Plena', 3, 'entrada')
+  ('Fibra Optica', 4, 'entrada'),
+  
+  ('Thalia Dealbata', 15, 'casa'),
+  ('Estrelicia de Agua', 15, 'casa'),
+
+  ('Valisneria', 4, 'stoantonio'),
+  ('Vallisneria Gigantea', 4, 'stoantonio'),
+
+  ('Zantedeschia Aetopica', 3, 'casa'),
+  ('Jarro', 3, 'casa'),
+  
+  ('Zephyranthes Candida', 4, 'eira'),
+  ('Lírio do Vento', 4, 'eira'),
+
 ]
 
 mycursor.executemany(sql, val)
