@@ -84,8 +84,8 @@ for line in encomenda:
             lago = x[0]
             break;
         if os.path.isfile(outputfolder + lago+".txt") == False:
-            foutput = open(outputfolder + lago+".txt", "x")
-        foutput = open(outputfolder + lago+".txt", "a")
+            foutput = open(outputfolder + lago+".txt", "x", encoding="utf8")
+        foutput = open(outputfolder + lago+".txt", "a", encoding="utf8")
         #write plant name
         foutput.write("\n" + close_matches[0])
         
