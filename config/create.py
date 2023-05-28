@@ -53,6 +53,7 @@ val = [
   ('Crassula Helmsii', 3, 'eira'),
   ('Crassula Aquatica', 3, 'eira'),
   ('Sedum dos Pântanos', 3, 'eira'),
+  ('Sedum Aquatico', 3, 'eira')
   
   ('Cyperus Alternifolius', 5, 'casa'),
   ('Papiro Guarda Chuva', 5, 'casa'),
