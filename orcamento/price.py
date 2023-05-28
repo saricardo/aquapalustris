@@ -106,11 +106,21 @@ for line in encomenda:
 
 if TOTAL >= 40:
     foutput.write("\nportes gratuitos")
-    foutput.write("\nTOTAL: " +str(TOTAL)+"€")
 else:
     foutput.write("\nportes envio: " + str(portes) +"€")
     TOTAL = TOTAL+portes
-    foutput.write("\nTOTAL: " +str(TOTAL)+"€")
+    
+foutput.write("\nTOTAL: " +str(TOTAL)+"€" + "\n\n")
+
+#pagamento
+pagamento = input("Metodo Pagamento: \n1. NIB \n 2.MBWAY \ninsira[1 ou 2]: ")
+if pagamento == "1":
+    foutput.write("\nO pagamento pode ser feito por transferencia para o seguinte NIB: 0045 1460 4017 4018 5214 2")
+else:
+    foutput.write("\nO pagamento pode ser feito por MBWay para o seguinte numero: 911 768 758")
+    
+foutput.write("\nAvise-me com o comprovativo assim que transferir. Obrigado")
+    
 
 foutput.close()
 finput.close();
